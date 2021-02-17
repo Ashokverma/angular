@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+
+<h1>{{myWelcome}}</h1>
+
+</div>
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http({
+    method : "GET",
+    url : "https://www.w3schools.com/angular/customers.php"
+  }).then(function mySuccess(response) {
+      $scope.myWelcome = response.data;
+    }, function myError(response) {
+      $scope.myWelcome = response.statusText;
+  });
+});
+</script>
+
+
+<script>
+       const xhr =new XMLHttpRequest();                
+       xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { 
+            var response =JSON.parse(xhr.response);
+            var data = response.sucess;
+            console.log(data);                         
+            }
+        };                        
+        xhr.open("GET","https://www.w3schools.com/angular/customers.php");            
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send(get=1);
+</script>
+
+</body>
+</html>

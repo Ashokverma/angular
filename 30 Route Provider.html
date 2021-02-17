@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<body ng-app="myApp">
+
+<p><a href="#/!">Welcome</a></p>
+
+<a href="#!red">Google</a>
+<a href="#!green">Facebook</a>
+<a href="#!blue">Youtube</a>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "http://www.google.com"
+    })
+    .when("/red", {
+        templateUrl : "http://www.facebook.com"
+    })
+    .when("/green", {
+        templateUrl : "http://www.youtube.com"
+    })
+    .when("/blue", {
+        templateUrl : "blue.htm"
+    });
+});
+</script>
+
+
+</body>
+</html>
