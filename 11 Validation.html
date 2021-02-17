@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Initilaize The Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+    <title>Anglar JS</title>
+  </head>
+  <body>
+     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+              
+                <div data-ng-app="" data-ng-init="text2='ashokverma3779@gmail.com'">
+                    <form name="testform">
+                       <!--  Enter Your Email ID  :  <input type="email" ng-model="text" name="emailAddress" />
+
+                        <span ng-show="testform.emailAddress.$error.email" style="Color:red;">Not Valid Email Address</span>
+
+                        <br/> -->
+
+                        Change Email Address : <input type="email" ng-model="text2" name="email2">
+
+                        <br/>
+
+                        <!-- Value Touched  -->
+
+                        <span ng-show="testform.email2.$touched"><hr style="color:red;" /></span>
+
+                        <!-- If Value Changed  -->
+
+                        <span ng-show="testform.email2.$dirty" style="color:red;">You are changing Your Email Id : {{ text2 }}</span>
+
+                        <!-- Validation True -->
+                        <br />
+
+                        <span ng-show="testform.email2.$valid" style="color:green;"> ✅ Correct Value Thank You </span>
+
+                        <span ng-show="testform.email2.$touched"><hr style="color:red;" /></span>
+
+
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

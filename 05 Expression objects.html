@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Initilaize The Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+    <title>Anglar JS</title>
+  </head>
+  <body>
+     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+
+                <!-- Objects -->
+              
+                <div data-ng-app="" data-ng-init="value={fname:'Ashok',lname:'Verma'}">
+                    {{value.fname + " " + value.lname }}
+
+                    <!-- Using Binds -->
+                    <br />
+
+
+                    Full name using span bind   :  <span data-ng-bind="value.fname + ' ' +value.lname "></span>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

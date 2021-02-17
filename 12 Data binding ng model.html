@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Initilaize The Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+    <title>Anglar JS</title>
+  </head>
+  <body>
+     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+              
+                <div data-ng-app="myapp" data-ng-init="" data-ng-controller="myctrl">
+                    <input data-ng-model="firstname" />
+                    {{firstname +" "+ lastname}} 
+
+                    <br/>
+
+                    <h1 ng-click="changeName();">{{firstname + " "+ lastname}}</h1>
+
+                    <br/>
+
+
+                    <h1>
+                        {{fullname()}}
+                    </h1>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var app = angular.module('myapp',[]);
+        app.controller('myctrl',function ($scope){
+
+            $scope.firstname="Ashok";
+            $scope.lastname='Verma';
+            $scope.fullname = function(){
+                return $scope.firstname + ' ' + $scope.lastname;                
+            };
+            $scope.changeName = function(){
+                $scope.firstname="Ahmed";
+                $scope.lastname='Mudassir';
+            };
+
+
+        });
+
+    </script>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

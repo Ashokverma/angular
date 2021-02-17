@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Initilaize The Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+    <title>Anglar JS</title>
+  </head>
+  <body>
+     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+              
+                <div data-ng-app="app" data-ng-init="">
+                    <!-- Using Element Name  -->
+                    <ashok-verma-tag></ashok-verma-tag>
+
+                    <br/>
+                    <!-- Using Attribute -->
+                    <div ashok-verma-tag></div>
+
+                    <br/>
+                    <!-- Using Class -->
+                   <!--  <div class="ashok-verma-tag"></div> -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("app",[]);
+        app.directive("ashokVermaTag", function(){
+
+            return {
+                /* restrict : "C", */
+                template: "<h1>Hello My name is Ashok verma</h1>"
+            };
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div data-ng-app="myapp" ng-controller="ctrl1" data-ng-init="mycolor='red'" >
+               First Name : <input type="text" data-ng-model="Firstname" />
+               Last Name  : <input type="text" data-ng-model="Lastname" />
+               <br/>
+               Full Name : {{Firstname+ " " +Lastname}}
+
+               <br>
+
+               <!-- Changing The color of Element  -->
+               
+               <input style="background-color:{{mycolor}};" data-ng-model="mycolor" >
+
+               
+
+        </div>
+
+        <script>
+            var app = angular.module('myapp',[]);
+            app.controller('ctrl1',function($scope){
+                $scope.Firstname="Ashok";
+                $scope.Lastname ="Verma";
+            });
+        </script>
+    </body>
+</html>
